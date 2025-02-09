@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% set mensagem = get_flashed_messages() %}
+    {% if mensagem %}
+        <div class="flash_alerta">
+            {{mensagem[0]}}
+        </div>
+
+    {% endif %}
+<div>
+    <h4> Faça o seu cadastro e receba conteúdos exclusivos</h4>
+    <form action= "/login" id="login" method="post">
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="senha">
+        <button type="submit" placeholder="enviar dados">ENVIAR</button>
+    </form>
+</div>
+
+</body>
+</html>
